@@ -93,7 +93,7 @@ int
 npc_readdir_r (Npcfid *fid, struct dirent *entry, struct dirent **result)
 {
 	Npqid qid;
-	int dname_size = PATH_MAX + 1;
+	int dname_size = NAME_MAX + 1;
 	u64 offset;
 	u8 type;
 	int res;
