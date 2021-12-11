@@ -58,7 +58,7 @@ fi
 
 %files
 %defattr(-,root,root)
-%doc AUTHORS COPYING README INSTALL ChangeLog
+%doc AUTHORS COPYING NEWS README.md INSTALL ChangeLog
 %{_sbindir}/diod
 %{_mandir}/man8/diod.*
 %{_mandir}/man5/diod.*

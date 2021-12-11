@@ -12,4 +12,4 @@ if ENABLE_TESTS
   SUBDIRS += tests
 endif
 
-EXTRA_DIST = diod.spec
+EXTRA_DIST = diod.spec README.md
