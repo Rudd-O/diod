@@ -30,7 +30,7 @@ system for I/O forwarding on Linux clusters.
 make CFLAGS="$RPM_OPT_FLAGS -fPIC -pie -Wl,-z,relro -Wl,-z,now"
 
 %check
-make check CFLAGS=-Werror
+make check CFLAGS="$RPM_OPT_FLAGS -fPIC -pie -Wl,-z,relro -Wl,-z,now"
 
 %install
 rm -rf $RPM_BUILD_ROOT
