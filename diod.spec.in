@@ -9,7 +9,6 @@ URL: http://github.com/chaos/diod
 Source0: %{name}-%{version}.tar.gz
 Buildroot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
-BuildRequires: tcp_wrappers-devel
 BuildRequires: lua-devel
 BuildRequires: munge-devel
 BuildRequires: ncurses-devel
@@ -28,7 +27,7 @@ system for I/O forwarding on Linux clusters.
 
 %build
 %configure
-make CFLAGS="-Werror -O2 -g"
+make CFLAGS="$RPM_OPT_FLAGS -fPIC -pie -Wl,-z,relro -Wl,-z,now"
 
 %check
 make check CFLAGS=-Werror
