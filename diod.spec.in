@@ -48,13 +48,10 @@ mv $RPM_BUILD_ROOT%{_mandir}/man8/diodmount.8 \
 rm -rf ${RPM_BUILD_ROOT}
 
 %post
-/usr/bin/systemctl enable diod
+%systemd_post %{name}.service
 
 %preun
-if [ "$1" = 0 ]; then
-  /usr/bin/systemctl stop diod
-  /usr/bin/systemctl disable diod
-fi
+%systemd_preun %{name}.service
 
 %files
 %defattr(-,root,root)
