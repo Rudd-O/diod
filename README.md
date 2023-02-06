@@ -1,9 +1,16 @@
-### diod
+# diod
 
 `diod` is a multi-threaded, user space file server that speaks
 [9P2000.L protocol](protocol.md).
 
-### Building
+## Installing and building
+
+### Fedora packages
+
+`diod` packages are available at https://repo.rudd-o.com/ for
+your particular Fedora release.
+
+### From source
 
 #### On Debian
 ```
